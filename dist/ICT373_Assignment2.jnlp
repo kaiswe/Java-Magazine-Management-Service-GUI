@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ICT373_Assignment2.jnlp">
+  <information>
+    <title>ICT373_Assignment2</title>
+    <vendor>Kai</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ICT373_Assignment2.jar" size="26074" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="ict373_assignment2.Client"  name="ICT373_Assignment2" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="BorderPane" prefHeight="400.0" prefWidth="500.0" fx:controller="ict373_assignment2.FXMLMagazineEditController">
+    <top>
+        <Label text="Edit Customer Details" BorderPane.alignment="TOP_CENTER" style="-fx-font-size: 20pt; -fx-padding: 10 10 10 10"/>
+        <Button BorderPane.alignment="TOP_CENTER" text="SUPPLEMENTS" onAction="#editMagazineSupplements"   />
+    </top>
+    <center>
+         <TilePane prefRows="10"  >
+            <Label text="Name: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerName" prefWidth="20"/>
+            <Label text="Email: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerEmail" prefWidth="20"/>
+            <Label text="Address: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerAddress" prefWidth="20"/>
+            <Label text="Supplement Interests: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerInterests" prefWidth="20"/>
+            <Label text="Payment Method: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerPaymentMethod" prefWidth="20"/>
+            <Label text="Card Number: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="customerCardNum" prefWidth="20"/>
+            <Label text="Add Associate Customer" style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <ComboBox fx:id="addAssociates"  maxWidth="200" /> 
+            <Label text="Linked Associate Customers (If applicable): " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="linkedAssociateCustomers" prefWidth="20"/>
+            <Button fx:id="saveEditBtn" text="SAVE" style="" onAction="#saveCustomerDetails"   />
+            <Button fx:id="resetBtn" text="RESET" onAction="#resetAllInputs" />
+         </TilePane>
+    </center>
+    <right>
+         <VBox>
+             <ListView fx:id="allCustomers" prefHeight="400" translateY="50" />
+             <Button fx:id="addBtn" text="ADD"  translateX="40" translateY="25"   />
+             <Button fx:id="editBtn" text="EDIT" onAction="#showCustomerDetails" translateX="100"   />
+             <Button fx:id="deleteBtn" text="DELETE"  onAction="#deleteCustomer" translateX="150" translateY="-25"    />
+         </VBox>
+         
+    </right>
+</BorderPane>

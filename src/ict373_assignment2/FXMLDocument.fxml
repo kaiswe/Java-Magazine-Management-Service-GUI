@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+
+
+
+<BorderPane id="BorderPane" prefWidth="900" prefHeight="900" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ict373_assignment2.FXMLDocumentController"  > 
+    <top>
+        <Label text="FunTimes Magazine Service" BorderPane.alignment="TOP_CENTER" style="-fx-font-size: 30pt" />
+    </top>
+    <center>
+        <FlowPane maxWidth="500" BorderPane.alignment="CENTER" style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid" >
+        <HBox spacing="300" alignment="TOP_CENTER" style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid; -fx-padding: 30 30 30 30">
+                <children>
+                        <Button fx:id="viewBtn" translateX="50"  scaleX="2" scaleY="2"   alignment="CENTER" text="VIEW" onAction="#viewAllMagazineDetails" style="-fx-padding: 3 30 3 30"  />
+                        <Button fx:id="createBtn" scaleX="2" scaleY="2" alignment="CENTER" text="CREATE" onAction="#viewAllMagazineDetails"  style="-fx-padding: 3 30 3 30"  />
+                        <Button fx:id="editBtn" translateX="-50"  scaleX="2" scaleY="2" alignment="CENTER" text="EDIT" onAction="#editMagazine" style="-fx-padding: 3 30 3 30" />
+                </children>
+        </HBox>
+        <VBox id="supplements" prefWidth="460" prefHeight="400"  style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid">
+            <Label  id="testing" text="List of Supplements"  translateX="100" style="-fx-font-size: 15pt"/>
+            <GridPane alignment="CENTER" style="-fx-padding: 50 30 30 20">
+                <ListView fx:id="magazineSupplements" onMouseClicked="#resetCustomerSelection"/>
+            </GridPane> 
+        </VBox>
+        <VBox id="magazineInfo"  prefWidth="475" >
+            <Label text="Information Panel"  translateX="100" style="-fx-font-size: 15pt"/>
+            <GridPane id="magazineInfoPanel" alignment="BOTTOM_CENTER" style="-fx-padding: 60 30 30 30">
+                <ListView prefWidth="500"  fx:id="magazineInfoPanel" />
+            </GridPane>
+            <Button fx:id="loadBtn" translateX="330" translateY="390" scaleX="2" scaleY="2" alignment="CENTER" text="LOAD" onAction="#loadMagazine" style="-fx-padding: 3 30 3 30" />
+            <Button fx:id="refreshBtn" translateX="100" translateY="370" scaleX="2" scaleY="2" alignment="CENTER" text="REFRESH" onAction="#refreshMagazineDetails" style="-fx-padding: 3 30 3 30" />
+        </VBox>
+        <VBox id="customers" prefWidth="460"  prefHeight="400"  style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid">
+            <Label text="List of Customers" translateX="100" style="-fx-font-size: 15pt" />
+            <GridPane id="customerList" alignment="CENTER" style="-fx-padding: 30 30 30 30">
+                <ListView fx:id="magazineCustomers" onMouseClicked="#resetSupplementSelection"/>
+            </GridPane> 
+        </VBox>
+        </FlowPane> 
+    </center>
+</BorderPane>
+

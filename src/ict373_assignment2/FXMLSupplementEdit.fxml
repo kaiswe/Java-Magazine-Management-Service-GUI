@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="BorderPane" prefHeight="400.0" prefWidth="500.0" fx:controller="ict373_assignment2.FXMLSupplementEditController" >
+    <top>
+        <Label text="Edit Customer Details" BorderPane.alignment="TOP_CENTER" style="-fx-font-size: 20pt; -fx-padding: 10 10 10 10"/>
+        <Button BorderPane.alignment="TOP_CENTER" text="CUSTOMERS" onAction="#editMagazineCustomers"   />
+    </top>
+    <center>
+         <TilePane>
+            <Label text="Supplement Title: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="supplementTitle" prefWidth="200.00"  />
+            <Label text="Supplement News: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextArea fx:id="supplementNews" prefWidth="40" prefHeight="40" />
+            <Label text="Supplement Deals: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextArea fx:id="supplementDeals" prefWidth="40" prefHeight="40" />
+            <Label text="Price: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="supplementPrice" maxWidth="45" />
+            <Label text="Magazine Price: " style="-fx-font-size: 10pt;-fx-padding: 10 10 10 10" />
+            <TextField fx:id="magazinePrice"/>
+            <Button fx:id="saveEditBtn" text="SAVE" style="" onAction="#saveSupplementDetails"   />
+            <Button fx:id="resetBtn" text="RESET" onAction="#resetAllInputs" />
+         </TilePane>
+    </center>
+    <right>
+         <VBox>
+             <ListView fx:id="allSupplements" prefHeight="400" translateY="50" />
+             <Button fx:id="addBtn" text="ADD" onAction="#showSupplementDetails" translateX="40" translateY="25"   />
+             <Button fx:id="editBtn" text="EDIT" onAction="#showSupplementDetails" translateX="100"   />
+             <Button fx:id="deleteBtn" text="DELETE"  onAction="#deleteSupplement" translateX="150" translateY="-25"    />
+         </VBox>
+         
+    </right>
+</BorderPane>
